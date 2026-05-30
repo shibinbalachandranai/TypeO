@@ -99,8 +99,8 @@ export default function HomePage() {
           background: 'rgba(13,21,38,0.85)',
           backdropFilter: 'blur(16px)',
           border: '1px solid rgba(56,189,248,0.2)',
-          borderRadius: 24,
-          padding: '40px 48px',
+          borderRadius: 20,
+          padding: '24px 36px',
           maxWidth: 480,
           width: '100%',
           boxShadow: '0 40px 80px rgba(0,0,0,0.5), 0 0 80px rgba(56,189,248,0.06)',
@@ -111,9 +111,9 @@ export default function HomePage() {
         <div style={{ marginBottom: 8 }}>
           <span
             style={{
-              fontSize: 64,
+              fontSize: 48,
               fontWeight: 900,
-              letterSpacing: -3,
+              letterSpacing: -2,
               background: 'linear-gradient(135deg, #38bdf8, #818cf8)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -124,7 +124,7 @@ export default function HomePage() {
             TypeO
           </span>
         </div>
-        <div style={{ fontSize: 14, color: '#5a7096', marginBottom: 36, letterSpacing: 0.5 }}>
+        <div style={{ fontSize: 13, color: '#5a7096', marginBottom: 20, letterSpacing: 0.5 }}>
           Blast the falling letters before they escape!
         </div>
 
@@ -143,12 +143,12 @@ export default function HomePage() {
             maxLength={20}
             style={{
               width: '100%',
-              padding: '14px 16px',
+              padding: '10px 14px',
               background: 'rgba(255,255,255,0.04)',
               border: `1px solid ${error ? 'rgba(248,113,113,0.5)' : 'rgba(56,189,248,0.2)'}`,
               borderRadius: 12,
               color: '#e8f0ff',
-              fontSize: 16,
+              fontSize: 15,
               outline: 'none',
               transition: 'border-color 0.2s',
               fontFamily: 'inherit',
@@ -162,8 +162,8 @@ export default function HomePage() {
           onClick={handleStart}
           style={{
             width: '100%',
-            padding: '15px 0',
-            marginTop: 16,
+            padding: '12px 0',
+            marginTop: 12,
             background: 'linear-gradient(135deg, #0ea5e9, #6366f1)',
             border: 'none',
             borderRadius: 13,
@@ -184,18 +184,18 @@ export default function HomePage() {
         {/* How to play */}
         <div
           style={{
-            marginTop: 24,
-            padding: '14px 16px',
+            marginTop: 16,
+            padding: '10px 14px',
             background: 'rgba(56,189,248,0.05)',
             border: '1px solid rgba(56,189,248,0.1)',
             borderRadius: 10,
             textAlign: 'left',
           }}
         >
-          <div style={{ fontSize: 12, color: '#38bdf8', fontWeight: 700, marginBottom: 8, letterSpacing: 1, textTransform: 'uppercase' }}>
+          <div style={{ fontSize: 11, color: '#38bdf8', fontWeight: 700, marginBottom: 6, letterSpacing: 1, textTransform: 'uppercase' }}>
             How to Play
           </div>
-          <ul style={{ fontSize: 13, color: '#5a7096', lineHeight: 1.7, listStyle: 'none', padding: 0 }}>
+          <ul style={{ fontSize: 12, color: '#5a7096', lineHeight: 1.6, listStyle: 'none', padding: 0 }}>
             <li>⌨️ Type the letter shown in each falling circle</li>
             <li>💥 Hit it before it reaches the bottom = +1 point</li>
             <li>❌ Miss it = −1 point &amp; a danger strike</li>
@@ -206,11 +206,11 @@ export default function HomePage() {
 
         {/* Top 3 mini-leaderboard */}
         {top3.length > 0 && (
-          <div style={{ marginTop: 20 }}>
-            <div style={{ fontSize: 12, color: '#5a7096', marginBottom: 10, letterSpacing: 1, textTransform: 'uppercase' }}>
+          <div style={{ marginTop: 14 }}>
+            <div style={{ fontSize: 11, color: '#5a7096', marginBottom: 8, letterSpacing: 1, textTransform: 'uppercase' }}>
               Top Players
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
               {top3.map((entry, i) => (
                 <div
                   key={entry.playerName}
@@ -218,14 +218,14 @@ export default function HomePage() {
                     display: 'flex',
                     alignItems: 'center',
                     gap: 10,
-                    padding: '8px 12px',
+                    padding: '6px 10px',
                     background: 'rgba(255,255,255,0.03)',
                     borderRadius: 8,
                   }}
                 >
-                  <span style={{ fontSize: 16 }}>{['🥇','🥈','🥉'][i]}</span>
-                  <span style={{ flex: 1, fontSize: 13, color: '#e8f0ff', textAlign: 'left' }}>{entry.playerName}</span>
-                  <span style={{ fontSize: 15, fontWeight: 800, color: '#38bdf8', fontVariantNumeric: 'tabular-nums' }}>
+                  <span style={{ fontSize: 14 }}>{['🥇','🥈','🥉'][i]}</span>
+                  <span style={{ flex: 1, fontSize: 12, color: '#e8f0ff', textAlign: 'left' }}>{entry.playerName}</span>
+                  <span style={{ fontSize: 14, fontWeight: 800, color: '#38bdf8', fontVariantNumeric: 'tabular-nums' }}>
                     {entry.bestScore}
                   </span>
                 </div>
@@ -235,13 +235,13 @@ export default function HomePage() {
         )}
 
         {/* Nav links */}
-        <div style={{ display: 'flex', gap: 12, marginTop: 20 }}>
+        <div style={{ display: 'flex', gap: 10, marginTop: 14 }}>
           <a
             href="/leaderboard"
             style={{
-              flex: 1, padding: '10px 0', background: 'rgba(255,255,255,0.03)',
+              flex: 1, padding: '8px 0', background: 'rgba(255,255,255,0.03)',
               border: '1px solid rgba(30,45,74,0.8)', borderRadius: 10,
-              color: '#5a7096', fontSize: 13, textDecoration: 'none', display: 'block', textAlign: 'center',
+              color: '#5a7096', fontSize: 12, textDecoration: 'none', display: 'block', textAlign: 'center',
             }}
           >
             🏆 Leaderboard
@@ -249,9 +249,9 @@ export default function HomePage() {
           <a
             href="/admin"
             style={{
-              flex: 1, padding: '10px 0', background: 'rgba(255,255,255,0.03)',
+              flex: 1, padding: '8px 0', background: 'rgba(255,255,255,0.03)',
               border: '1px solid rgba(30,45,74,0.8)', borderRadius: 10,
-              color: '#5a7096', fontSize: 13, textDecoration: 'none', display: 'block', textAlign: 'center',
+              color: '#5a7096', fontSize: 12, textDecoration: 'none', display: 'block', textAlign: 'center',
             }}
           >
             ⚙️ Admin
