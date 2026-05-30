@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #060b14;
+  --bg-card: #0d1526;
+  --border: #1e2d4a;
+  --text: #e8f0ff;
+  --text-muted: #5a7096;
+  --accent: #38bdf8;
+  --accent2: #818cf8;
+  --success: #4ade80;
+  --danger: #f87171;
+  --warning: #fbbf24;
+  --glow: rgba(56, 189, 248, 0.4);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@keyframes fall {
+  from { transform: translateY(-120px); }
+  to   { transform: translateY(calc(100vh + 120px)); }
+}
+
+@keyframes blast {
+  0%   { transform: scale(1); opacity: 1; }
+  50%  { transform: scale(2.5); opacity: 0.6; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+@keyframes miss {
+  0%   { transform: scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: scale(0) rotate(45deg); opacity: 0; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 12px var(--glow); }
+  50%       { box-shadow: 0 0 32px var(--glow), 0 0 60px var(--glow); }
+}
+
+@keyframes score-pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+@keyframes confetti-fall {
+  0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-8px); }
+  40%       { transform: translateX(8px); }
+  60%       { transform: translateX(-6px); }
+  80%       { transform: translateX(6px); }
+}
+
+@keyframes slide-in-up {
+  from { transform: translateY(40px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes star-spin {
+  from { transform: rotate(0deg) scale(1); }
+  to   { transform: rotate(360deg) scale(1.1); }
+}
+
+.circle-falling {
+  animation: fall linear forwards;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: default;
+  user-select: none;
+  font-weight: 800;
+  font-family: 'Courier New', monospace;
+  border: 3px solid rgba(255,255,255,0.3);
+  transition: filter 0.1s;
+}
+
+.circle-blast {
+  animation: blast 0.4s ease-out forwards;
+  pointer-events: none;
+}
+
+.circle-miss {
+  animation: miss 0.4s ease-in forwards;
+  pointer-events: none;
+}
+
+.score-pop {
+  animation: score-pop 0.3s ease-out;
+}
+
+.shake {
+  animation: shake 0.4s ease-out;
+}
+
+.slide-in {
+  animation: slide-in-up 0.4s ease-out forwards;
+}
