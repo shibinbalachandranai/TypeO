@@ -117,4 +117,55 @@ npx vercel --prod
 
 ---
 
+## More Projects by Shibin Balachandran
+
+A collection of browser-based hobby projects — all built with modern web tech, zero frameworks bloat, and deployed on Vercel.
+
+---
+
+### 🐍 Snake & Soul
+> *Play Snake. Discover your mood.*
+
+A classic Snake game with a psychological twist — it analyses your gameplay patterns (movement rhythm, reaction speed, consistency) to determine your concentration level and emotional state, then offers personalised tips and motivational quotes.
+
+**Tech:** JavaScript · Canvas API · Mood Analysis · Psychology  
+**Live:** [shibinbalachandran.in/hobby/snake](https://shibinbalachandran.in/hobby/snake)
+
+---
+
+### 🎲 Snake & Ladder
+> *The classic board game, fully in the browser.*
+
+Fully playable Snake & Ladder with PvP and CPU modes. Features an SVG-rendered animated board, synthesized sound effects, post-game analytics, leaderboard, and a PIN-protected admin dashboard.
+
+**Tech:** Next.js 15 · TypeScript · Tailwind CSS · SVG · Web Audio API  
+**Live:** [snakeladder-one.vercel.app](https://snakeladder-one.vercel.app/) &nbsp;|&nbsp; **Source:** [github.com/shibinbalachandranai/snakeLadder](https://github.com/shibinbalachandranai/snakeLadder)
+
+---
+
+### 🎯 Ludo
+> *Classic Ludo with a neon cyberpunk soul.*
+
+A comprehensive Ludo game supporting 2–4 players with PvP, CPU, and semi-auto modes. Built with a neon cyberpunk aesthetic using pure SVG graphics, synthesized audio, leaderboard, and admin dashboard.
+
+**Tech:** Next.js · TypeScript · Tailwind CSS v4 · SVG · Web Audio API  
+**Live:** [ludo-game-shibin.vercel.app](https://ludo-game-shibin.vercel.app) &nbsp;|&nbsp; **Source:** [github.com/shibinbalachandranai/ludo-game](https://github.com/shibinbalachandranai/ludo-game)
+
+---
+
+### ⌨️ TypeO *(this project)*
+> *Type fast. Score big.*
+
+Fast-paced typing game for kids. [See full details above.](#typeo--typing-game-for-kids)
+
+**Live:** [typeo.vercel.app](https://typeo.vercel.app) &nbsp;|&nbsp; **Source:** [github.com/shibinbalachandranai/TypeO](https://github.com/shibinbalachandranai/TypeO)
+
+---
+
+> All projects are open source, built from scratch with no game engines or UI component libraries — just Next.js, TypeScript, SVG, and the Web Audio API.
+>
+> **Portfolio:** [shibinbalachandran.in](https://shibinbalachandran.in) &nbsp;|&nbsp; **Hobby Lab:** [shibinbalachandran.in/hobby](https://shibinbalachandran.in/hobby)
+
+---
+
 *Built by [Shibin Balachandran](https://shibinbalachandran.in) · 2025*
