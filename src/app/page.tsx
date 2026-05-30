@@ -259,6 +259,58 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Other Projects */}
+      <div
+        style={{
+          position: 'relative',
+          zIndex: 10,
+          maxWidth: 480,
+          width: '100%',
+          marginTop: 20,
+        }}
+      >
+        <div style={{ fontSize: 11, color: '#5a7096', letterSpacing: 2, textTransform: 'uppercase', marginBottom: 12, textAlign: 'center' }}>
+          More by Shibin Balachandran
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
+          {[
+            { emoji: '🐍', name: 'Snake & Soul', desc: 'Play Snake. Discover your mood.', href: 'https://shibinbalachandran.in/hobby/snake', color: '#34d399' },
+            { emoji: '🎲', name: 'Snake & Ladder', desc: 'Classic board game with analytics', href: 'https://snakeladder-one.vercel.app/', color: '#60a5fa' },
+            { emoji: '🎯', name: 'Ludo', desc: 'Neon cyberpunk 4-player Ludo', href: 'https://ludo-game-shibin.vercel.app', color: '#c084fc' },
+          ].map((p) => (
+            <a
+              key={p.name}
+              href={p.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'block',
+                padding: '12px 10px',
+                background: 'rgba(13,21,38,0.7)',
+                backdropFilter: 'blur(12px)',
+                border: `1px solid rgba(30,45,74,0.8)`,
+                borderRadius: 12,
+                textDecoration: 'none',
+                textAlign: 'center',
+                transition: 'border-color 0.2s, transform 0.15s',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = `${p.color}55`;
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(30,45,74,0.8)';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              <div style={{ fontSize: 22, marginBottom: 4 }}>{p.emoji}</div>
+              <div style={{ fontSize: 12, fontWeight: 700, color: p.color, marginBottom: 3 }}>{p.name}</div>
+              <div style={{ fontSize: 10, color: '#5a7096', lineHeight: 1.4 }}>{p.desc}</div>
+            </a>
+          ))}
+        </div>
+      </div>
+
       {/* Footer */}
       <div style={{ position: 'relative', zIndex: 10, marginTop: 24, fontSize: 12, color: 'rgba(90,112,150,0.5)' }}>
         Built by{' '}
